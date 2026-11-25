@@ -75,7 +75,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cine-cabeza p.sub{margin:10px 0 0;color:rgba(238,245,240,.72);font-size:1.05rem}
 .pantalla-cine{height:min(78vh,780px);aspect-ratio:9/16;margin:0 auto;border-radius:22px;overflow:hidden;background:#000;
   box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08)}
-.pantalla-cine video{width:100%;height:100%;object-fit:cover;background:#000}
+.ver-youtube{position:relative;display:block;width:100%;height:100%;color:#fff;text-decoration:none}
+.ver-youtube img{width:100%;height:100%;object-fit:cover;background:#000;transition:filter .25s}
+.ver-youtube .play{position:absolute;top:50%;left:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:#e62117;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.45);transition:transform .25s}
+.ver-youtube .play svg{width:38px;height:38px;margin-left:4px}
+.ver-youtube .ver-texto{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);padding:8px 16px;border-radius:999px;background:rgba(0,0,0,.6);font-weight:700;font-size:.95rem;white-space:nowrap}
+.ver-youtube:hover img,.ver-youtube:focus-visible img{filter:brightness(.8)}
+.ver-youtube:hover .play,.ver-youtube:focus-visible .play{transform:scale(1.08)}
+.ver-youtube:focus-visible{outline:3px solid #fff;outline-offset:-3px}
 .cine-pie{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:28px 0 0;font-size:.93rem;color:rgba(238,245,240,.7)}
 .cine-pie span{display:inline-flex;align-items:center;gap:8px}
 .cine-pie svg{width:16px;height:16px}
